@@ -1,0 +1,35 @@
+<title>Video</title>
+<link rel="stylesheet" href='../static/style.css'/>
+
+<!--<style>
+  .en {
+  margin-top: 100;
+  position: relative; 
+}
+</style>
+<div class="en">
+<h1>Video</h1>
+</div> -->
+
+<div class="flexboxContainer">
+    <img src="{{ url_for('video_feed') }}" height="100%", width="80%">
+</div>
+<style>
+    body {
+        text-align: center;
+    }
+
+.to {
+  margin-top: -150;
+  position: relative; 
+}
+
+h3 {
+  margin: 20px;
+}
+</style>
+<div class="to">
+    <h3> PAN Angle: <a href="/pan/-"class="button">-</a> [ {{ panServoAngle }} ] <a href="/pan/+"class="button">+</a> </h3>
+    <h3> TILT Angle: <a href="/tilt/-"class="button">-</a> [ {{ tiltServoAngle }} ] <a href="/tilt/+"class="button">+</a> </h3>
+    <h3> Picture: <a href="{{ url_for('photo') }}" class="button">Picture</a> </h3>
+</div>
